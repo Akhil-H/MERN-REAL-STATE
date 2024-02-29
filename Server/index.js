@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 
 
 // const router = require('./Routes/user.route.js');
-// const authrouter = require('./Routes/auth.route.js');
+const authrouter = require('./Routes/auth.route.js');
 
 
 const app = express()
@@ -16,7 +16,7 @@ app.use(cors())
 app.use(express.json())
 
 // app.use('/user', router) 
-// app.use('/api', authrouter) 
+app.use('/api', authrouter) 
 
 
 const connectDB = async () => {
